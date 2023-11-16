@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'demoapp';
 
   // variableName: dataType = value;
-  studentId: number = 40;
+  studentId: number = 80;
   studentName: string = 'John';
   studentEmailId: string = 'john@gmail.com';
   studentStatus: boolean = false;
