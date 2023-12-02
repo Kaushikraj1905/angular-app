@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UspsComponent } from './usps/usps.component';
 
 @Component({
   selector: 'app-root',
@@ -6,17 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demoapp';
+  title: string = 'Training';
+  name: string = 'Kaushik';
+
+
 
   // variableName: dataType = value;
-  studentId: number = 80;
+  // int studentId = 10;
+  studentId: number = 10;
   studentName: string = 'John';
   studentEmailId: string = 'john@gmail.com';
   studentStatus: boolean = false;
   studentIds: number[] = [1, 2, 3, 4, 50, 60, 80];
   studentNames: string[] = ['Tom', 'John', 'Maxi'];
 
-  company: any = {
+    company: any = {
     companyName: 'sira',
     companyId: 59432,
     companysize: 50,
@@ -40,4 +45,40 @@ export class AppComponent {
     name: 'somr thing here',
     email: ''
   };
+  uspscomponent: any;
+
+  constructor() {
+    this.studentName = 'ram';
+  }
+
+  changeButtonAngular() {
+
+  }
+  
+changeButtonReact() {
+
 }
+changeButtonVue() {
+
+}
+usps () {
+  this.uspscomponent.usps()
+
+}
+
+
+
+}
+
+// setOfCarNames=(name: string) => {}
+// setOfCarModel = (Model: number) => {}
+// getThePersonByName = (name: string) => {}
+
+// export class AppComponent {
+//   title = 'tutorial';
+//   studentName:string = 
+// }
+
+// courseType(tutorialType: string) {
+//   this.title = tutorialType;
+// }

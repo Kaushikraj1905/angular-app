@@ -1,0 +1,25 @@
+<p>SIRA INC</p>
+<h1>Welcome to sira inc</h1>
+<button (click)="jobsWeOffer()">Jobs</button>
+<table *ngIf="coinMap.length > 0" >
+    <tr>
+      <th>company</th>
+      <th>id</th>  
+      <th>name</th>
+    </tr>
+    <tr *ngFor="let coin of coinMap">
+      <td>{{coin.company}}</td>
+      <td>{{coin.id}}</td>
+      <td>{{coin.name}}</td>
+    </tr>
+    <!-- <tr>
+      <td>John Smith</td>
+      <td>35</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <td>Ram Krishna</td>
+      <td>19</td>
+      <td>Nepal</td>
+    </tr> -->
+  </table>

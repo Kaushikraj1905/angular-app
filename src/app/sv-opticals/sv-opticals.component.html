@@ -1,0 +1,50 @@
+<p>sv-opticals</p>
+<h1>welcome to SV OPTICALS</h1>
+<button (click)="Rayban()">Rayban</button> <br>
+<!-- <button (click)="Gucci()">Gucci</button> -->
+<table *ngIf="universityList.length > 0">
+    <tr>
+      <th>Name</th>
+      <th>Country</th>
+      <th>state</th>
+    </tr>
+
+    <tr *ngFor="let university of universityList">
+
+      <td>{{university.name}}</td>
+      <td>{{university.country}}</td>
+      <td>{{university.alpha_two_code}}</td>
+
+    </tr>
+    <!-- <tr>
+      <td>{{universityList[0].name}}</td>
+      <td>{{universityList[0].country}}</td>
+      <td>{{universityList[0].alpha_two_code}}</td>
+    </tr>
+    <tr>
+        <td>{{universityList[1].name}}</td>
+        <td>{{universityList[1].country}}</td>
+        <td>{{universityList[1].alpha_two_code}}</td>
+      </tr>
+      <tr>
+        <td>{{universityList[2].name}}</td>
+        <td>{{universityList[2].country}}</td>
+        <td>{{universityList[2].alpha_two_code}}</td>
+      </tr>
+      <tr>
+        <td>{{universityList[3].name}}</td>
+        <td>{{universityList[3].country}}</td>
+        <td>{{universityList[3].alpha_two_code}}</td>
+      </tr>
+      <tr>
+        <td>{{universityList[4].name}}</td>
+        <td>{{universityList[4].country}}</td>
+        <td>{{universityList[4].alpha_two_code}}</td>
+      </tr>
+      <tr>
+        <td>{{universityList[5].name}}</td>
+        <td>{{universityList[5].country}}</td>
+        <td>{{universityList[5].alpha_two_code}}</td>
+      </tr> -->
+    
+  </table>
