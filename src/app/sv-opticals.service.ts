@@ -8,8 +8,13 @@ export class SvOpticalsService {
 
   constructor(private httpClient: HttpClient) { }
 
-  Rayban() {
-    console.log('Sunglass');
-    return this.httpClient.get('http://universities.hipolabs.com/search?country=United+Kingdom');
+  Rayban(countryName: string) {
+    console.log(countryName);
+    return this.httpClient.get(`http://universities.hipolabs.com/search?country=${countryName}`);
   }
 }
+
+
+// http://universities.hipolabs.com/search
+
+// http://universities.hipolabs.com/search?country=United+Kingdom

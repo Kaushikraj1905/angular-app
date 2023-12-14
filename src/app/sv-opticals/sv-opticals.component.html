@@ -1,11 +1,15 @@
 <p>sv-opticals</p>
 <h1>welcome to SV OPTICALS</h1>
-<button (click)="Rayban()">Rayban</button> <br>
+
+<input type="text" name="" id="country-input" placeholder="Enter Country Here" [(ngModel)]="countryName">
+
+
+<button id="university-search" (click)="Rayban()">Get Universities</button> <br>
 <!-- <button (click)="Gucci()">Gucci</button> -->
 <table *ngIf="universityList.length > 0">
     <tr>
-      <th>Name</th>
-      <th>Country</th>
+      <th id="name">Name</th>
+      <th id="country">Country</th>
       <th>state</th>
     </tr>
 
@@ -16,6 +20,7 @@
       <td>{{university.alpha_two_code}}</td>
 
     </tr>
+    
     <!-- <tr>
       <td>{{universityList[0].name}}</td>
       <td>{{universityList[0].country}}</td>

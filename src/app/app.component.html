@@ -1,10 +1,17 @@
 
 <ul>
-    <li><a>Mens</a></li>
-    <li><a>Womens</a></li>
-    <li><a>Kids</a></li>
-    <li><a>Sale</a></li>
+  <li><a (click)="navigateTo('home')">Home</a></li>
+    <li><a (click)="navigateToMen()">Mens</a></li>
+    <li><a (click)="navigateToWomen()">Womens</a></li>
+    <li><a (click)="navigateTo('kids')">Kids</a></li>
+    <li><a (click)="navigateTo('sale')">Sale</a></li>
+    <li><a (click)="navigateTo('sira')">Sira</a></li>
+    <li><a (click)="navigateTo('universities')">universities</a></li>
   </ul>
+
+
+
+  <router-outlet></router-outlet>
 
 <!-- <p>i am working</p>
  <app-remote-header></app-remote-header>

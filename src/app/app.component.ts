@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UspsComponent } from './usps/usps.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -47,7 +48,7 @@ export class AppComponent {
   };
   uspscomponent: any;
 
-  constructor() {
+  constructor(private router: Router) {
     this.studentName = 'ram';
   }
 
@@ -64,6 +65,17 @@ changeButtonVue() {
 usps () {
   this.uspscomponent.usps()
 
+}
+
+navigateToMen() {
+  this.router.navigate(['mens'])
+}
+navigateToWomen() {
+  this.router.navigate(['womens'])
+}
+
+navigateTo(pathTo: string) {
+  this.router.navigate([pathTo])
 }
 
 

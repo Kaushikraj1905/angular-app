@@ -9,6 +9,7 @@ import { SvOpticalsService } from '../sv-opticals.service';
 export class SvOpticalsComponent {
 
   universityList: any = [];
+  countryName: string = '';
 
   testData: any = [
     {name: 'test1', id: '1'}, //0
@@ -18,10 +19,9 @@ export class SvOpticalsComponent {
 
   // rename this function and follow naming convention
   Rayban() {
-    this.testData[1].name
-    this.testData[2].id
-    console.log('working')
-    this.SvOpticalsService.Rayban().subscribe(
+ console.log(this.countryName)
+
+    this.SvOpticalsService.Rayban(this.countryName).subscribe(
       (success) => {
         console.log(success);
         console.log(this.universityList.length);

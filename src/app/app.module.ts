@@ -21,6 +21,19 @@ import { LuxoftBodyComponent } from './luxoft-body/luxoft-body.component';
 import { LuxoftServicesComponent } from './luxoft-services/LuxoftServicesComponent';
 import { SvOpticalsComponent } from './sv-opticals/sv-opticals.component';
 import { SiraIncComponent } from './sira-inc/sira-inc.component';
+import { MensComponent } from './shopping/mens/mens.component';
+import { WomensComponent } from './shopping/womens/womens.component';
+import { KidsComponent } from './shopping/kids/kids.component';
+import { SaleComponent } from './shopping/sale/sale.component';
+import { TopsComponent } from './shopping/mens/tops/tops.component';
+import { BottomsComponent } from './shopping/mens/bottoms/bottoms.component';
+import { CoatsComponent } from './shopping/mens/coats/coats.component';
+import { KurthiComponent } from './shopping/womens/kurthi/kurthi.component';
+import { SareeComponent } from './shopping/womens/saree/saree.component';
+import { SkirtsComponent } from './shopping/womens/skirts/skirts.component';
+import { HomeComponent } from './shopping/home/home.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -43,10 +56,22 @@ import { SiraIncComponent } from './sira-inc/sira-inc.component';
     LuxoftBodyComponent,
     LuxoftServicesComponent,
     SvOpticalsComponent,
-    SiraIncComponent
+    SiraIncComponent,
+    MensComponent,
+    WomensComponent,
+    KidsComponent,
+    SaleComponent,
+    TopsComponent,
+    BottomsComponent,
+    CoatsComponent,
+    KurthiComponent,
+    SareeComponent,
+    SkirtsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule
   ],
