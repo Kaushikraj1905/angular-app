@@ -1,0 +1,16 @@
+
+<form [formGroup]="signupForm">
+    <label for="name">User Name</label>
+    <input type="text" name="name" id="name" formControlName="name">
+    <br>
+    <label for="userPassword">Password</label>
+    <input type="password" name="userPassword" id="userPassword" formControlName="userPassword">
+    <br>
+    <label for="userRole">Role</label>
+    <input type="text" name="userRole" id="userRole" formControlName="userRole">
+    <br>
+
+    <button type="submit" (click)="onSignUpFormSubmit()">Sign Up</button>
+
+
+</form>

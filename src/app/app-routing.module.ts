@@ -13,9 +13,12 @@ import { SareeComponent } from './shopping/womens/saree/saree.component';
 import { SkirtsComponent } from './shopping/womens/skirts/skirts.component';
 import { HomeComponent } from './shopping/home/home.component';
 import { SvOpticalsComponent } from './sv-opticals/sv-opticals.component';
+import { FormComponent } from './communication/form/form.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   
   { path: 'mens', component: MensComponent, children: [
@@ -35,6 +38,11 @@ const routes: Routes = [
   { path: 'sale', component: SaleComponent },
   { path: 'sira', component: SiraIncComponent },
   { path: 'universities', component: SvOpticalsComponent },
+  {path: 'communication', component: FormComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'sign-up', component: SignUpComponent},
+
+
 
 ];
 

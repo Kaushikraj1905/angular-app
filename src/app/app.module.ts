@@ -33,7 +33,13 @@ import { SareeComponent } from './shopping/womens/saree/saree.component';
 import { SkirtsComponent } from './shopping/womens/skirts/skirts.component';
 import { HomeComponent } from './shopping/home/home.component';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormComponent } from './communication/form/form.component';
+import { TableComponent } from './communication/table/table.component';
+import { NamesComponent } from './communication/names/names.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 @NgModule({
@@ -67,11 +73,18 @@ import { FormsModule } from '@angular/forms';
     KurthiComponent,
     SareeComponent,
     SkirtsComponent,
-    HomeComponent
+    HomeComponent,
+    FormComponent,
+    TableComponent,
+    NamesComponent,
+    LoginComponent,
+    SignUpComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule
   ],

@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UspsComponent } from './usps/usps.component';
 import { Router } from '@angular/router';
+import { UserProfileService } from './user-profile.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title: string = 'Training';
   name: string = 'Kaushik';
+  userName: string = '';
 
 
 
@@ -48,8 +50,17 @@ export class AppComponent {
   };
   uspscomponent: any;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private userProfileService: UserProfileService) {
     this.studentName = 'ram';
+  }
+
+  ngOnInit() {
+    this.userProfileService.userProfile$.subscribe(
+      (userProfileInfo) => {
+        console.log(userProfileInfo);
+        this.userName = userProfileInfo;
+      }
+      )
   }
 
   changeButtonAngular() {
@@ -75,7 +86,7 @@ navigateToWomen() {
 }
 
 navigateTo(pathTo: string) {
-  this.router.navigate([pathTo])
+  this.router.navigate([pathTo]) // 
 }
 
 

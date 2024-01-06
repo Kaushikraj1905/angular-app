@@ -1,0 +1,37 @@
+
+<app-table></app-table>
+<button id="university-search" (click)="universityList()">Get Universities</button>
+<input type="text" name="" id="country-input" placeholder="Enter university Here" [(ngModel)]="universityName">
+
+
+<form [formGroup]="universityForm">
+  <label for="universityId">University ID: </label>
+  <input type="text" name="universityId" id="universityId" formControlName="universityId">
+  <br>
+
+  <label for="universityName">University Name: </label>
+  <input type="text" name="universityName" id="universityName" formControlName="universityName">
+  <br>
+
+  <label for="universityCountry">University Country: </label>
+  <input type="text" name="universityCountry" id="universityCountry" formControlName="universityCountry">
+<br>
+  <button type="submit" (click)="onFormSubmit()">Add new University</button>
+
+</form>
+
+<table *ngIf="universityList.length > 0">
+    <tr>
+      <th>Name</th>
+      <th>Country</th>
+      <th>state</th>
+    </tr>
+
+    <tr *ngFor="let university universityList">
+
+      <td>{{university.name}}</td>
+      <td>{{university.country}}</td>
+      <td>{{university.alpha_two_code}}</td>
+
+    </tr>
+</table>

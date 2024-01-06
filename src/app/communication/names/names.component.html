@@ -1,0 +1,16 @@
+<p>names works!</p>
+<form [formGroup]="universityForm">
+    <label for="universityId">University ID: </label>
+    <input type="text" name="universityId" id="universityId" formControlName="universityId">
+    <br>
+  
+    <label for="universityName">University Name: </label>
+    <input type="text" name="universityName" id="universityName" formControlName="universityName">
+    <br>
+  
+    <label for="universityCountry">University Country: </label>
+    <input type="text" name="universityCountry" id="universityCountry" formControlName="universityCountry">
+  <br>
+    <button type="submit" (click)="onFormSubmit()">Add new University</button>
+  
+  </form>
