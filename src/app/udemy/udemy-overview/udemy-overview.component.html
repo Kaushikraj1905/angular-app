@@ -1,0 +1,8 @@
+<button type="submit" (click)="getAllCourses()">Get All Courses</button>
+
+<div class="course-list-container">
+    <div *ngFor="let course of courseList">
+        <app-udemy-course [course]="course"></app-udemy-course>
+    </div>
+  </div>
+  

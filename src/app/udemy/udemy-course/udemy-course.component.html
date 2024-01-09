@@ -1,0 +1,13 @@
+
+
+<span class="mar-30 course-container">
+    <img class="course-img" src={angularImage} alt={course.image} width="250" height="145" />
+    <div class="course-name">{{course.name}}</div>
+    <div class="course-instructor-price">By: {{course.alpha_two_code}}</div>
+    <div class="course-instructor-price">$ 9.99</div>
+
+    <button *ngIf="!isAddedTocart" (click)="additemTocart()">Add To Cart</button>
+    <button *ngIf="isAddedTocart" (click)="removeItemFromCart(course.name)">Remove From Cart</button>
+    
+
+</span>

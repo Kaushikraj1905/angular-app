@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit{
       password: new FormControl()
     })
   }
+  
  onLogInClick() {
   console.log(this.loginForm);
   console.log(this.loginForm.value);

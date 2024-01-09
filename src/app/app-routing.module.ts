@@ -16,6 +16,7 @@ import { SvOpticalsComponent } from './sv-opticals/sv-opticals.component';
 import { FormComponent } from './communication/form/form.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -41,6 +42,9 @@ const routes: Routes = [
   {path: 'communication', component: FormComponent},
   {path: 'login', component: LoginComponent},
   {path: 'sign-up', component: SignUpComponent},
+  {path: 'cart', component: CartComponent},
+  {path: 'udemy', loadChildren: () => import('./udemy/udemy.module').then((module) => module.UdemyModule )}
+
 
 
 

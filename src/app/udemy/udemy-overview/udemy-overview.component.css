@@ -1,0 +1,12 @@
+.course-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Or 'flex-start' if you want them aligned to the left */
+  }
+  
+  .course-container {
+    /* ... rest of your styles ... */
+    width: calc(33% - 60px); /* for 3 cards in a row, adjust the percentage as needed */
+    margin: 30px; /* This will ensure spacing around the cards */
+  }
+  

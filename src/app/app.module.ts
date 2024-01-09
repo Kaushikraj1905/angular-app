@@ -40,6 +40,7 @@ import { NamesComponent } from './communication/names/names.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -79,7 +80,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     NamesComponent,
     LoginComponent,
     SignUpComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

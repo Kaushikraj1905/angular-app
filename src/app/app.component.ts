@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UspsComponent } from './usps/usps.component';
 import { Router } from '@angular/router';
 import { UserProfileService } from './user-profile.service';
+import { UdemyService } from './udemy/udemy.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { UserProfileService } from './user-profile.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  noOfCoursesIncart: number = 0;
   title: string = 'Training';
   name: string = 'Kaushik';
   userName: string = '';
@@ -50,7 +52,7 @@ export class AppComponent implements OnInit {
   };
   uspscomponent: any;
 
-  constructor(private router: Router, private userProfileService: UserProfileService) {
+  constructor(private router: Router, private userProfileService: UserProfileService, private udemyService: UdemyService) {
     this.studentName = 'ram';
   }
 
@@ -61,6 +63,13 @@ export class AppComponent implements OnInit {
         this.userName = userProfileInfo;
       }
       )
+
+      this.udemyService.itemsInCart$.subscribe(
+        (udemyCartInfo) => {
+          console.log(udemyCartInfo)
+          this.noOfCoursesIncart = udemyCartInfo.length;
+        }
+      );
   }
 
   changeButtonAngular() {
